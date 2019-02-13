@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="brv-UM-fmf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Watch List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewWatchGallary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DUv-HF-bh1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4OD-N5-jV0">
+                                    <size key="itemSize" width="182" height="235"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="saY-NJ-r3y" customClass="WatchCollectionViewCell" customModule="CollectionViewWatchGallary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="235"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="235"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Watch 2" translatesAutoresizingMaskIntoConstraints="NO" id="e60-2a-VaL">
+                                                    <rect key="frame" x="8" y="10" width="166" height="183"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nje-6h-ta7">
+                                                    <rect key="frame" x="61" y="199" width="60" height="26"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="e60-2a-VaL" secondAttribute="trailing" constant="8" id="HcN-Ua-Edg"/>
+                                            <constraint firstItem="e60-2a-VaL" firstAttribute="leading" secondItem="saY-NJ-r3y" secondAttribute="leading" constant="8" id="RSM-RT-1QD"/>
+                                            <constraint firstItem="e60-2a-VaL" firstAttribute="top" secondItem="saY-NJ-r3y" secondAttribute="top" constant="10" id="Y3C-c3-lHR"/>
+                                            <constraint firstItem="e60-2a-VaL" firstAttribute="centerX" secondItem="nje-6h-ta7" secondAttribute="centerX" id="cEk-ny-1KC"/>
+                                            <constraint firstAttribute="bottom" secondItem="nje-6h-ta7" secondAttribute="bottom" constant="10" id="h50-25-zrb"/>
+                                            <constraint firstItem="nje-6h-ta7" firstAttribute="top" secondItem="e60-2a-VaL" secondAttribute="bottom" constant="6" id="iSk-cF-R9h"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgView" destination="e60-2a-VaL" id="Q7Q-xv-e0y"/>
+                                            <outlet property="nameLabel" destination="nje-6h-ta7" id="bdO-dF-J5v"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lZd-eh-nlY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oPZ-yP-vGQ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DUv-HF-bh1" secondAttribute="trailing" id="CiF-cv-8SI"/>
+                            <constraint firstItem="DUv-HF-bh1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FXU-g4-6iW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DUv-HF-bh1" secondAttribute="bottom" id="Vc4-pd-gD1"/>
+                            <constraint firstItem="DUv-HF-bh1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pfF-dJ-HGj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watch List" id="1sL-bg-WAZ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DUv-HF-bh1" id="OPw-6T-8dO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-242"/>
+        </scene>
+        <!--Watch Details-->
+        <scene sceneID="Lu4-b5-CPZ">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" title="Watch Details" id="uiI-hH-9Fq" customClass="DetailsViewController" customModule="CollectionViewWatchGallary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BHV-zA-Y8K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-rO-LR8">
+                                <rect key="frame" x="44" y="126" width="287" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="h1a-qB-Voi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Watch 10" translatesAutoresizingMaskIntoConstraints="NO" id="hBU-Lu-i0Y">
+                                <rect key="frame" x="35" y="216" width="305" height="301"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jqo-rO-LR8" firstAttribute="centerX" secondItem="BHV-zA-Y8K" secondAttribute="centerX" id="EUC-2H-cOf"/>
+                            <constraint firstItem="jqo-rO-LR8" firstAttribute="top" secondItem="Opr-7T-9Y5" secondAttribute="top" constant="106" id="GDb-86-PpS"/>
+                            <constraint firstItem="hBU-Lu-i0Y" firstAttribute="leading" secondItem="Opr-7T-9Y5" secondAttribute="leading" constant="35" id="NHd-l3-EGf"/>
+                            <constraint firstItem="hBU-Lu-i0Y" firstAttribute="top" secondItem="jqo-rO-LR8" secondAttribute="bottom" constant="35" id="Pd1-2b-p89"/>
+                            <constraint firstItem="Opr-7T-9Y5" firstAttribute="bottom" secondItem="hBU-Lu-i0Y" secondAttribute="bottom" constant="150" id="XCL-Fq-pui"/>
+                            <constraint firstItem="jqo-rO-LR8" firstAttribute="leading" secondItem="Opr-7T-9Y5" secondAttribute="leading" constant="44" id="cLw-U3-goz"/>
+                            <constraint firstItem="jqo-rO-LR8" firstAttribute="centerX" secondItem="hBU-Lu-i0Y" secondAttribute="centerX" id="vIs-1H-oXt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Opr-7T-9Y5"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsImage" destination="hBU-Lu-i0Y" id="Suy-wd-cGu"/>
+                        <outlet property="detailsLabel" destination="jqo-rO-LR8" id="zgb-gn-vFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVJ-aq-gIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="-242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Se-bo-EM3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brv-UM-fmf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QzP-g2-HfD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fmP-ma-5nH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNf-Pd-w25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-172.26386806596702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Watch 10" width="193" height="262"/>
+        <image name="Watch 2" width="225" height="225"/>
+    </resources>
+</document>
